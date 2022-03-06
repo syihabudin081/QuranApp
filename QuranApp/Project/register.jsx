@@ -12,7 +12,7 @@ import {
 
 import { useDispatch } from "react-redux";
 import { login } from "./redux/authSlice";
- import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import Login from "./login"
 
 ;
@@ -55,7 +55,7 @@ export default function Register({ navigation }) {
     <View style={styles.container}>
       <Image style={{ flex: 3 / 4 }} source={require("./assets/logo.png")} />
       <View style={{ flex: 1 }}>
-        <Text style={{ padding: 3, marginLeft: 10 }}>Email</Text>
+        <Text style={{ padding: 3, marginLeft: 10,fontFamily: "Montserrat_600SemiBold" }}>Email</Text>
         <TextInput
           style={{
             backgroundColor: "white",
@@ -68,7 +68,7 @@ export default function Register({ navigation }) {
           value={email}
           onChangeText={(value) => setEmail(value)}
         />
-        <Text style={{ padding: 3, marginLeft: 10 }}>Password ( min 6 huruf)</Text>
+        <Text style={{ padding: 3, marginLeft: 10,fontFamily: "Montserrat_600SemiBold" }}>Password ( min 6 huruf)</Text>
         <TextInput
           style={{
             backgroundColor: "white",
@@ -84,7 +84,7 @@ export default function Register({ navigation }) {
 
         <TouchableOpacity style={styles.button} onPress={submit}>
           <View>
-            <Text style={{ color: "white" }}>Register</Text>
+            <Text style={{ color: "white",fontFamily: "Montserrat_600SemiBold" }}>Register</Text>
           </View>
         </TouchableOpacity>
       </View>

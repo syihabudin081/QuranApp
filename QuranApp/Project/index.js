@@ -15,7 +15,7 @@ import SurahScreen from "./SurahScreen";
 import { AntDesign } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import Register from "./register";
-import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+ import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { setSignInStatus } from "./redux/authSlice";
 
 const Stack = createStackNavigator();
@@ -60,6 +60,9 @@ export default function index() {
               options={{
                 headerTitleAlign:"center",
                 headerTransparent:true,
+                headerTitleStyle:{
+                  fontFamily:"Montserrat_600SemiBold"
+                }
               }}
             />
           </>
@@ -77,6 +80,8 @@ export default function index() {
                 headerStyle: {
                   backgroundColor: "#BDECD0",
                 },
+                
+                
                 headerLeft: () => (
                   <FontAwesome5 name="quran" size={24} color="black" />
                 ),
@@ -91,12 +96,12 @@ export default function index() {
                   backgroundColor: "#BDECD0",
 
                 },
-                
+               
                 headerTitle: () => (
                   <>
                   <View style={{ flexDirection: "row" }}>
               <Text
-                style={{ fontSize: 19, marginRight: 10, fontWeight: "bold" }}
+                style={{ fontSize: 19, marginRight: 10,fontFamily: "Montserrat_600SemiBold" }}
               >
                 Al-Quran App
               </Text>
@@ -136,7 +141,7 @@ const MyDrawwer = () => (
           <>
             <View style={{ flexDirection: "row" }}>
               <Text
-                style={{ fontSize: 19, marginRight: 10, fontWeight: "bold" }}
+                style={{ fontSize: 19, marginRight: 10,fontFamily: "Montserrat_600SemiBold"}}
               >
                 Al-Quran App
               </Text>
@@ -150,12 +155,19 @@ const MyDrawwer = () => (
       }}
     />
     <Drawwer.Screen
-      name="Aboutme"
+      name="About me"
       component={Aboutme}
       options={{
         headerStyle: {
           backgroundColor: "#BDECD0",
+          
         },
+        headerTitle:"About Me",
+        headerTitleStyle:{
+          fontFamily: "Montserrat_600SemiBold"
+        },
+        headerTitleAlign:"center"
+        ,
         drawerIcon: () => (
           <MaterialCommunityIcons name="face-profile" size={24} color="black" />
         ),
@@ -166,7 +178,10 @@ const MyDrawwer = () => (
       component={Logout}
       
       options={{
-      
+      headerStyle:{
+        backgroundColor:"#BDECD0"
+      },headerTitle:"Logout",
+      headerTitleAlign:"center",
         drawerIcon: () => (
           <TouchableOpacity
             onPress={() => {

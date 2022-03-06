@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   judulSkill: {
     color: "white",
     fontSize:12,
-    
+    fontFamily:"Montserrat_600SemiBold"
   },
   
 

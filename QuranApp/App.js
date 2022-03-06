@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 import { store } from "./Project/redux/store";
 
 
-import { initializeApp,getApps } from "firebase/app";
+import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCUgBuGklCTduX8A8JKIuKt3nfLpNOR-KI",
@@ -18,10 +18,8 @@ const firebaseConfig = {
 };
 
 
-if(getApps().length){
 const app = initializeApp(firebaseConfig);
 
-}
 
 
 export default function App() {

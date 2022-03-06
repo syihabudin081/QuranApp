@@ -12,7 +12,7 @@ import { FlatList } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { ScrollView } from "react-native-virtualized-view";
 import SurahScreen from "./SurahScreen";
-import { getAuth,signOut } from "firebase/auth";
+
 
 export default function Home({ navigation }) {
   const [data, setData] = useState();
@@ -51,7 +51,9 @@ export default function Home({ navigation }) {
               borderRadius: 45,
               padding: 10,
               paddingHorizontal: 40,
-              margin: 10,
+              margin: 20,
+              fontFamily: "Montserrat_600SemiBold"
+              
             }}
           >
             Daftar Surah
@@ -81,6 +83,7 @@ export default function Home({ navigation }) {
 
                           borderRadius: 45,
                           padding: 5,
+                          fontFamily: "Montserrat_600SemiBold"
                         }}
                       >
                         {item.englishName}
@@ -93,8 +96,8 @@ export default function Home({ navigation }) {
                         style={{
                           textAlign: "right",
                           fontSize: 12,
-                          fontWeight: "200",
-                          fontStyle: "italic",
+                          
+                         fontFamily:"Montserrat_500Medium_Italic" 
                         }}
                       >
                         {item.englishNameTranslation}

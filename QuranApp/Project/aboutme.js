@@ -78,10 +78,11 @@ const styles = StyleSheet.create({
   name: {
     padding: 9,
     alignSelf: "center",
+    
   },
   nama: {
     fontSize: 18,
-    paddingBottom: 5,
+    paddingBottom: 5,fontFamily:"Montserrat_600SemiBold"
   },
   desc: {
     fontSize: 14,

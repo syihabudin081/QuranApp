@@ -20,11 +20,11 @@ export default function SurahScreen({ route, navigation }) {
             borderRadius: 50,
           }}
         >
-          <Text style={{ fontSize: 16, fontWeight: "bold" }}>
+          <Text style={{ fontSize: 16,fontFamily: "Montserrat_600SemiBold", }}>
             {englishName} ( {name} )
           </Text>
           <Text style={{ fontStyle: "italic" }}>{englishNameTranslation}</Text>
-          <Text>Surah Ke-{number}</Text>
+          <Text style={{fontFamily: "Montserrat_400Regular"}}>Surah Ke-{number}</Text>
         </View>
 
         <FlatList
